@@ -36,6 +36,10 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				success: { // Added success color
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -65,9 +69,12 @@ export default {
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				md: 'calc(var(--radius) - 2px)', // Stays 6px if radius is 0.5rem (8px)
+				sm: 'calc(var(--radius) - 4px)'  // Stays 4px if radius is 0.5rem (8px)
 			},
+			fontFamily: { // Added font family
+        		sans: ['var(--font-sans)'],
+      		},
 			keyframes: {
 				'accordion-down': {
 					from: {
